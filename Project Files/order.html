@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Burger Kingdom</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="checkout-page">
+
+    <nav>
+        <div class="logo">Burger Kingdom</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="order.html">Back to Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="checkout-container">
+        <form id="order-form" onsubmit="processOrder(event)">
+            <h2><i class="fas fa-shipping-fast"></i> Delivery Details</h2>
+
+            <div class="form-group">
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" required placeholder="0300-1234567">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Delivery Address *</label>
+                <textarea id="address" required placeholder="House No, Street, Area, City"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="instructions">Special Instructions (Optional)</label>
+                <textarea id="instructions" placeholder="E.g., Extra ketchup, ring doorbell..."></textarea>
+            </div>
+
+            <div class="order-summary-box">
+                <h3>Total to Pay: $<span id="checkout-total">0.00</span></h3>
+                <p class="payment-note"><i class="fas fa-money-bill-wave"></i> Payment Mode: Cash on Delivery</p>
+            </div>
+
+            <button type="submit" class="place-order-btn">Confirm My Order</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load the total price on page load
+        window.onload = function() {
+            loadCheckoutTotal();
+        };
+    </script>
+</body>
+</html>

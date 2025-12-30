@@ -1,0 +1,105 @@
+/* --- CHECKOUT PAGE STYLES --- */
+
+/* The specific background for this page */
+body.checkout-page {
+    /* REPLACE WITH YOUR IMAGE PATH */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/1600x900/?burger,restaurant');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: calc(100vh - 80px); /* Adjust based on nav height */
+}
+
+#order-form {
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 500px; /* Keeps the form nice and compact */
+}
+
+#order-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Important for padding not to affect width */
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff9f1c; /* Highlight with burger orange */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.order-summary-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+    border: 2px dashed #ccc;
+}
+
+.order-summary-box h3 {
+    margin: 0 0 10px;
+    color: #d90429;
+    font-size: 1.8rem;
+}
+
+.payment-note {
+    color: #2b9348;
+    font-weight: bold;
+    margin: 0;
+}
+
+.place-order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #d90429; /* Burger Red */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.place-order-btn:hover {
+    background-color: #b00321;
+}

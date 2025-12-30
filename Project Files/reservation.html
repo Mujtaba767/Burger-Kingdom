@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table | BurgerKingdom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index3.html" class="logo">BURGER<span>KINGDOM</span></a>
+        <a href="index3.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <div class="fire-particles">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="booking-container">
+        
+        <div class="booking-info">
+            <div class="info-content">
+                <h3>Reserve Your Spot</h3>
+                <h1>TASTE THE <br><span class="highlight">LEGEND</span></h1>
+                <p>Experience the atmosphere, the fire, and the flavor. Reservations are recommended for weekends and groups of 4 or more.</p>
+                
+                <div class="contact-details">
+                    <div class="item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <span>Booking Line</span>
+                            <p>(555) 987-6543</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span>Dinner Hours</span>
+                            <p>Daily: 5pm - 11pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-bg"></div>
+        </div>
+
+        <div class="booking-form-wrapper">
+            <form class="booking-form" id="reservationForm">
+                <h2>Book a Table</h2>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="tel" placeholder="(555) 000-0000" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Time</label>
+                        <input type="time" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Guests</label>
+                    <select required>
+                        <option value="" disabled selected>Select People</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="large">7+ (Large Group)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Special Requests (Optional)</label>
+                    <textarea rows="3" placeholder="Allergies, birthday, private booth..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to show an alert on submit
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! Your table request has been received. We will send a confirmation SMS shortly.");
+        });
+    </script>
+
+</body>
+</html>
